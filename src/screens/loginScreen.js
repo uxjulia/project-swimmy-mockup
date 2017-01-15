@@ -3,17 +3,18 @@ import {observer} from 'mobx-react';
 import views from 'config/views';
 import styles from 'screens/styles/loginScreen.css';
 import AppWrapper from 'components/appWrapper'
+import AuthService from 'utils/AuthService'
 
 class LoginScreen extends React.Component {
   handleOnSubmit(e) {
     e.preventDefault();
 
-    const { store } = this.props;
-    const {router: {goTo}} = store;
-    goTo(views.issues);
+    const { auth } = this.props
+    auth.login()
   }
 
   render() {
+
     return (
       <AppWrapper title='Login' backButton>
         <form className={styles.container} onSubmit={this.handleOnSubmit.bind(this)} method='post'>
