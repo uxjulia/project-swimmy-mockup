@@ -23,7 +23,7 @@ class LoginScreen extends React.Component {
 
           <div className='form-group'>
             <input className={styles.input}  type='password' name='password' placeholder='Password'/>
-            <input className={styles.buttons} type='submit' value='Sign In' />
+            <button className={styles.buttons}>login</button>
           </div>
         </form>
       </AppWrapper>
