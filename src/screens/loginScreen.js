@@ -1,8 +1,8 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import views from '../config/views';
-import styles from './styles/loginScreen.css';
-import AppWrapper from '../components/appWrapper'
+import views from 'config/views';
+import styles from 'screens/styles/loginScreen.css';
+import AppWrapper from 'components/appWrapper'
 
 class LoginScreen extends React.Component {
   handleOnSubmit(e) {

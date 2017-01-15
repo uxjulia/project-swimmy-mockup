@@ -1,8 +1,8 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import views from '../config/views';
-import AppWrapper from '../components/appWrapper'
-import styles from './styles/splashScreenStyles.css';
+import views from 'config/views';
+import AppWrapper from 'components/appWrapper'
+import styles from 'screens/styles/splashScreenStyles.css';
 
 class SplashScreen extends React.Component {
   render() {

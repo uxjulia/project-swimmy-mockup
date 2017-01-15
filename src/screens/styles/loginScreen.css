@@ -3,9 +3,9 @@
 }
 
 .input {
-  composes: input from "../../shared/styles/buttonStyles.css"
+  composes: input from "shared/styles/buttonStyles.css"
 }
 
 .buttons {
-  composes: btn from "../../shared/styles/buttonStyles.css"
+  composes: btn from "shared/styles/buttonStyles.css"
 }
