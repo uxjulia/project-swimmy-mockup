@@ -1,8 +1,13 @@
+.h1, .h2, .h3, .h4, .h5, .h6, p {
+  //for now, all text is using the same font-family, might need to
+  //make this more specific later if more fonts are added
+  font-family: 'Montserrat', sans-serif;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: 0;
   margin: 0;
   line-height: 135%;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .h1 {
@@ -37,4 +42,8 @@
 
 .normalText {
   font-size: 20px;
+}
+
+.mutedText {
+  color: #858585;
 }

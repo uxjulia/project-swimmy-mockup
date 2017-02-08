@@ -8,6 +8,7 @@ import SplashScreen from '../screens/splashScreen';
 import LoginScreen from '../screens/loginScreen';
 import Dashboard from '../screens/dashboard';
 import IssuesScreen from '../screens/issuesScreen';
+import ProfileScreen from '../screens/profileScreen';
 
 const views = {
   home: new Route({
@@ -25,7 +26,11 @@ const views = {
   issues: new Route({
     path: 'issues',
     component: <IssuesScreen />
-  })
+  }),
+  profile: new Route({
+    path: 'profile',
+    component: <ProfileScreen />
+  }),
 };
 
 export default views;

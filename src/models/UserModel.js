@@ -5,11 +5,18 @@ export default class UserModel {
   id;
 	@observable name;
 	@observable zipcode;
+  @observable profilePictureUrl;
 
-  constructor(store, id, name, zipcode) {
+  constructor(store, user) {
     this.store = store;
-    this.id = id;
-    this.name = name;
-    this.zipcode = zipcode;
+    this.id = user.id;
+    this.firstName = user.givenName;
+    this.lastName = user.familyName;
+    this.name = user.givenName + ' ' + user.familyName;
+    this.zipcode = user.address.postalCode;
+    this.city = user.address.locality;
+    this.state = user.address.region;
+    this.profilePictureUrl = user.profilePictureUrl;
+    this.personalStatement = user.personalStatement;
   }
 }

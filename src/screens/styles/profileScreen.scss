@@ -1,0 +1,24 @@
+.profileScreen {
+	padding: 30px;
+}
+
+.profileName {
+	composes: h2 from "../../shared/styles/fontStyles.scss"
+}
+
+.profileCity {
+	composes: mutedText from "../../shared/styles/fontStyles.scss";
+}
+
+.profileSettings {
+	composes: mutedText from "../../shared/styles/fontStyles.scss";
+	&:hover {
+		color: $selected-blue;
+		cursor: pointer;
+	}
+}
+
+.profileStatement {
+	composes: mutedText from "../../shared/styles/fontStyles.scss";
+	margin: 20px 0;
+}

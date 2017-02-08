@@ -16,10 +16,18 @@ export default class UserStore {
 		//memberships to groups rather than going through each and every member of each and every group
 		//to see if the user is a member; that would be very expensive computationally.
 		//For the moment, I'm not making a membership store, but it may be necessary in the future.
+    //TODO: profile picture URL should also be a CDN in the future? will have to consult with back-end team
     let user = {
       'id': 1,
-      'name': 'Jane Doe',
-      'zipcode': '47401'
+      'givenName': 'Kathryn',
+      'familyName': 'Janeway',
+      'address': [
+        'locality': 'Bloomington',
+        'region': 'IN',
+        'postalCode': '47401'
+      ],
+      'profilePictureUrl': '/src/shared/assets/img/profile.jpeg',
+      'personalStatement': "I'm an activist for education, healthcare, and civil rights. I'm willing to protest, knock on doors, and phone call!"
     };
     let memberships = [
       {
@@ -29,7 +37,7 @@ export default class UserStore {
         'role': 'Owner'
       }
     ];
-    this.user = new UserModel(this, user.id, user.name, user.zipcode);
+    this.user = new UserModel(this, user);
     memberships.map((membership) => {
       this.memberships.push(new MembershipModel(this, membership.id, membership.user_id, membership.group_id, membership.role));
     });
